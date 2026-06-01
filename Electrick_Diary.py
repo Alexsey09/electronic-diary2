@@ -13,10 +13,8 @@ def load_diary():
         print("Файл дневника не найден!")
         return None 
     
-
     diary = {}
     grades = {}
-
 
     for line in lines:
         if line.startswith("ФИО: "):
@@ -37,8 +35,6 @@ def load_diary():
 
     diary["Оценки"] = grades
     return diary
-
-
 
 def show_diary(diary):
     print(f"\nОценки ученика {diary["ФИО"]} {diary["Класс"]}:")
@@ -61,8 +57,6 @@ def medium_all_marks(diary):
 
     print(f"Средний балл ученика {diary["ФИО"]} - {avg_all_marks}")
         
-
-
 def count_marks(diary):
     min_marks = ""
     max_marks = ""
@@ -87,26 +81,6 @@ def count_marks(diary):
     print(f"Предмет с самым большим средним баллом: {max_marks} ({rounds_max})")
     print(f"Предмет с самым низким средним баллом: {min_marks} ({rounds_min})")
         
-
-
-# Домашнее задание
-# Задание 1: Найти предмет с самым высоким и самым низким средним баллом
-
-# Создай новую функцию      
-
-# Что должна делать функция:
-# Пройтись по всем предметам в словаре "Оценки"
-# Для каждого предмета:
-# найти средний балл
-# Определить:
-# предмет с самым высоким средним баллом
-# предмет с самым низким средним баллом
-# Вывести результат на экран
-
-
-
-
-
 def main():
     diary = load_diary()
     print(f"\nДобро пожаловать, {diary["ФИО"]} из {diary["Класс"]}")
