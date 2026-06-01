@@ -104,6 +104,6 @@ def main():
             print("Пока!")
             break
         else:
-            print("Введите 0 или 1")
+            print("Введиите 0\1\2\3")
 
 main()
